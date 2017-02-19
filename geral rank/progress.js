@@ -9,7 +9,6 @@
 // @grant        none
 // ==/UserScript==
 
-// need to get this from *://www.urionlinejudge.com.br/judge/*/categories
 var totalProblems = 1493;
 
 jQuery.fn.insertAt = function(index, element) {
@@ -24,6 +23,8 @@ jQuery.fn.insertAt = function(index, element) {
   return this;
 };
 
+var arrayPorcentagem = [];
+
 $(document).ready(function(){
     $('thead tr').insertAt(7, "<th class='small'>Progresso</th>");
 
@@ -37,7 +38,11 @@ $(document).ready(function(){
         var porcentagem = (userProblemsSolved*100.0)/totalProblems;
         porcentagem = porcentagem.toFixed(2);
 
+        arrayPorcentagem.push(porcentagem);
+    }
+
+    for(i=0; i<26; i++){
         $('tbody tr:eq(' + i + ') td:eq(6)').after('<td class="small"><span class="porc"></span></td>');
-        $('.porc').html(porcentagem + "%");
+        $('.porc').html(arrayPorcentagem[i] + "%");
     }
 });
