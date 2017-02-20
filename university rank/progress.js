@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Progress Everywhere - University Rank
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2.1
 // @description  try to take over the world!
 // @author       Gustavo Marmentini
 // @include      https://www.urionlinejudge.com.br/judge/pt/users/university/*
@@ -14,7 +14,7 @@ var arrayPor = [];
 
 $('thead tr').append('<th class="small">Progresso</th>');
 
-for(i=0; i<totalCont; i++){
+for(i=0; i<=totalCont; i++){
     var userProblems = $('tbody tr:nth-child(' + i + ') td:nth-child(4)').text();
     userProblems = userProblems.replace(/\s/g, "");
     userProblems = userProblems.replace(/\./g,'');
@@ -26,6 +26,6 @@ for(i=0; i<totalCont; i++){
     arrayPor.push(porcentagem);
 }
 
-for(i=0; i<totalCont; i++){
-    $('tbody tr:nth-child(' + i + ')').append('<td class="small"><span class="porc">' + arrayPor[i] + '%<span></td>');
+for(i=0; i<=totalCont; i++){
+    $('tbody tr:nth-child(' + i + ')').append('<td class="small"><span class="porc">' + arrayPor[i] + '%</span></td>');
 }

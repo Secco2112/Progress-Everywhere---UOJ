@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Progress Everywhere - Profile
 // @namespace    https://www.urionlinejudge.com.br/judge/pt
-// @version      0.1
+// @version      0.2.1
 // @description  The user progress on profile page.
 // @author       Gustavo Marmentini
-// @include      https://www.urionlinejudge.com.br/judge/pt/profile/*
+// @include      *://www.urionlinejudge.com.br/judge/pt/profile/*
+// @include      *://www.urionlinejudge.com.br/judge/pt/users/*
 // @run-at document-idle
 // @grant        none
 // ==/UserScript==
