@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         User Progress
+// @name         Progress Everywhere - Profile
 // @namespace    https://www.urionlinejudge.com.br/judge/pt
 // @version      0.1
 // @description  The user progress on profile page.
