@@ -27,6 +27,5 @@ for(i=0; i<totalCont; i++){
 }
 
 for(i=0; i<totalCont; i++){
-    $('tbody tr:nth-child(' + i + ')').append('<td class="small"><span class="porc"><span></td>');
-    $('.porc').html(arrayPor[i]);
+    $('tbody tr:nth-child(' + i + ')').append('<td class="small"><span class="porc">' + arrayPor[i] + '%<span></td>');
 }

@@ -28,7 +28,7 @@ var arrayPorcentagem = [];
 $(document).ready(function(){
     $('thead tr').insertAt(7, "<th class='small'>Progresso</th>");
 
-    for(i=0; i<26; i++){
+    for(i=0; i<27; i++){
         var userProblemsSolved = $('tbody tr:nth-child(' + i + ') td:nth-child(5)').text();
         userProblemsSolved = userProblemsSolved.replace(/\s/g, "");
         userProblemsSolved = userProblemsSolved.replace(/\./g,'');
@@ -41,8 +41,7 @@ $(document).ready(function(){
         arrayPorcentagem.push(porcentagem);
     }
 
-    for(i=0; i<26; i++){
-        $('tbody tr:eq(' + i + ') td:eq(6)').after('<td class="small"><span class="porc"></span></td>');
-        $('.porc').html(arrayPorcentagem[i] + "%");
+    for(i=0; i<27; i++){
+        $('tbody tr:eq(' + i + ') td:eq(6)').after('<td class="small"><span class="porc">' + arrayPorcentagem[i] + '%</span></td>');
     }
 });
