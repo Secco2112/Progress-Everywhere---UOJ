@@ -2,9 +2,9 @@
 // @name         Progress Everywhere - University Rank
 // @namespace    http://tampermonkey.net/
 // @version      0.2.1
-// @description  try to take over the world!
+// @description  The users progress on university rank.
 // @author       Gustavo Marmentini
-// @include      https://www.urionlinejudge.com.br/judge/pt/users/university/*
+// @include      *://www.urionlinejudge.com.br/judge/*/users/university/*
 // @grant        none
 // ==/UserScript==
 

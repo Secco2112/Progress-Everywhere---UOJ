@@ -4,8 +4,8 @@
 // @version      0.2.1
 // @description  The user progress on profile page.
 // @author       Gustavo Marmentini
-// @include      *://www.urionlinejudge.com.br/judge/pt/profile/*
-// @include      *://www.urionlinejudge.com.br/judge/pt/users/*
+// @include      *://www.urionlinejudge.com.br/judge/*/profile/*
+// @include      *://www.urionlinejudge.com.br/judge/*/users/*
 // @run-at document-idle
 // @grant        none
 // ==/UserScript==

@@ -2,10 +2,10 @@
 // @name         Progress Everywhere - Geral Rank
 // @namespace    http://tampermonkey.net/
 // @version      0.2.1
-// @description  The uses sprogress on geral rank page.
+// @description  The users progress on geral rank page.
 // @author       Gustavo Marmentini
-// @include      https://www.urionlinejudge.com.br/judge/pt/rank
-// @include      https://www.urionlinejudge.com.br/judge/pt/rank?page=*
+// @include      *://www.urionlinejudge.com.br/judge/*/rank
+// @include      *://www.urionlinejudge.com.br/judge/*/rank?page=*
 // @grant        none
 // ==/UserScript==
 
