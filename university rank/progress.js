@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Progress Everywhere - University Rank
 // @namespace    http://tampermonkey.net/
-// @version      0.2.1
+// @version      0.3
 // @description  The users progress on university rank.
 // @author       Gustavo Marmentini
 // @include      *://www.urionlinejudge.com.br/judge/*/users/university/*
@@ -12,12 +12,22 @@ var totalCont = $('tbody tr td.medium').length;
 var totalProblems = 1493;
 var arrayPor = [];
 
-$('thead tr').append('<th class="small">Progresso</th>');
+var url = window.location.href;
+url = url.split('/');
+var langUrl = url[4];
+var progressText = {};
+
+progressText["pt"] = 'Progresso';
+progressText["en"] = 'Progress';
+progressText["es"] = 'Progreso';
+
+$('thead tr').append('<th class="small">' + progressText[langUrl] + '</th>');
 
 for(i=0; i<=totalCont; i++){
     var userProblems = $('tbody tr:nth-child(' + i + ') td:nth-child(4)').text();
     userProblems = userProblems.replace(/\s/g, "");
-    userProblems = userProblems.replace(/\./g,'');
+    userProblems = userProblems.replace(/\./g, "");
+    userProblems = userProblems.replace(/\,/g, "");
     userProblems = parseInt(userProblems);
 
     var porcentagem = (userProblems*100.0)/totalProblems;
