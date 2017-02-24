@@ -21,7 +21,7 @@ jQuery.fn.insertAt = function(index, element) {
   return this;
 };
 
-var totalProblems = 1493;
+var totalProblems = 1494;
 var totalCont = $('tbody tr td.medium').length;
 var url = window.location.href;
 url = url.split('/');

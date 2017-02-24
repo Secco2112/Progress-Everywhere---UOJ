@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 var totalCont = $('tbody tr td.medium').length;
-var totalProblems = 1493;
+var totalProblems = 1494;
 var arrayPor = [];
 
 var url = window.location.href;

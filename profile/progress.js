@@ -11,7 +11,7 @@
 // ==/UserScript==
 
 // need to get this from *://www.urionlinejudge.com.br/judge/*/categories
-var totalProblems = 1493;
+var totalProblems = 1494;
 
 var auxText = $('.pb-information > li:nth-child(5)').text();
 auxText = auxText.split('\n');
