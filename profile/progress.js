@@ -6,12 +6,21 @@
 // @author       Gustavo Marmentini
 // @include      *://www.urionlinejudge.com.br/judge/*/profile/*
 // @include      *://www.urionlinejudge.com.br/judge/*/users/*
+// @exclude      *://www.urionlinejudge.com.br/judge/*/users/university/*
 // @run-at document-idle
 // @grant        none
 // ==/UserScript==
 
 // need to get this from *://www.urionlinejudge.com.br/judge/*/categories
 var totalProblems = 1494;
+
+$.ajax({
+  url: "/judge/pt/categories",
+  success: function(){
+      var text = $('.pn-category > h1').text();
+      //alert(text);
+  },
+});
 
 var auxText = $('.pb-information > li:nth-child(5)').text();
 auxText = auxText.split('\n');
